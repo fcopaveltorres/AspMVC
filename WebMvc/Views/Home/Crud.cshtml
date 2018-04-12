@@ -1,0 +1,29 @@
+﻿@model Model.Item
+@{
+    ViewBag.Title = (Model.ItemId != "" ? Model.title + " " + Model.title : "New Product");
+}
+<ol class="breadcrumb">
+    <li><a href="~/">Products</a></li>
+    <li class="active">@(Model.ItemId != "" ? Model.ItemId : "New Product")</li>
+</ol>
+@using (Html.BeginForm("save", "Home", FormMethod.Post, new { id = "frm-item" }))
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">Information</div>
+        <div class="panel-body">
+            <dl class="dl-horizontal">
+                <div class="form-group">
+                    @Html.LabelFor(x => x.ItemId)
+                    @Html.TextBoxFor(x => x.ItemId, new { @class = "form-control" })
+                    @Html.LabelFor(x => x.title)
+                    @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
+                </div>
+            </dl>
+        </div>
+    </div>
+    <div class="text-right">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+}
+
+

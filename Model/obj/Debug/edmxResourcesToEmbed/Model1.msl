@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebStationModelStoreContainer" CdmEntityContainer="DBContext">
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="WebStationModel.Item">
+        <MappingFragment StoreEntitySet="Item">
+          <ScalarProperty Name="historical_start_time" ColumnName="historical_start_time" />
+          <ScalarProperty Name="sub_status" ColumnName="sub_status" />
+          <ScalarProperty Name="IsPosted" ColumnName="IsPosted" />
+          <ScalarProperty Name="seller_custom_field" ColumnName="seller_custom_field" />
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="accepts_mercadopago" ColumnName="accepts_mercadopago" />
+          <ScalarProperty Name="secure_thumbnail" ColumnName="secure_thumbnail" />
+          <ScalarProperty Name="thumbnail" ColumnName="thumbnail" />
+          <ScalarProperty Name="permalink" ColumnName="permalink" />
+          <ScalarProperty Name="condition" ColumnName="condition" />
+          <ScalarProperty Name="stop_time" ColumnName="stop_time" />
+          <ScalarProperty Name="start_time" ColumnName="start_time" />
+          <ScalarProperty Name="listing_type_id" ColumnName="listing_type_id" />
+          <ScalarProperty Name="buying_mode" ColumnName="buying_mode" />
+          <ScalarProperty Name="sold_quantity" ColumnName="sold_quantity" />
+          <ScalarProperty Name="available_quantity" ColumnName="available_quantity" />
+          <ScalarProperty Name="initial_quantity" ColumnName="initial_quantity" />
+          <ScalarProperty Name="currency_id" ColumnName="currency_id" />
+          <ScalarProperty Name="original_price" ColumnName="original_price" />
+          <ScalarProperty Name="base_price" ColumnName="base_price" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="seller_id" ColumnName="seller_id" />
+          <ScalarProperty Name="subtitle" ColumnName="subtitle" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="site_id" ColumnName="site_id" />
+          <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+          <ScalarProperty Name="ChangeUser" ColumnName="ChangeUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

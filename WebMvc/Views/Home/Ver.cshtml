@@ -1,0 +1,20 @@
+﻿@model Model.Item
+@{
+    ViewBag.Title = "View Produtc" ;
+}
+<ol class="breadcrumb">
+    <li><a href="~/">Products</a></li>
+    <li class="active">@Model.ItemId</li>
+</ol>
+<div class="panel panel-default">
+    <div class="panel-heading">Information</div>
+    <div class="panel-body">
+        <dl class="dl-horizontal">
+            <dt>ItemId</dt>
+            <dd>@Model.ItemId</dd>
+            <dt>Title</dt>
+            <dd>@Model.title</dd>
+        </dl>
+    </div>
+</div>
+

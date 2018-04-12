@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebStationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="CreateUser" Type="nchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="smalldatetime" />
+    <Property Name="ChangeUser" Type="nchar" MaxLength="50" />
+    <Property Name="ChangeDate" Type="smalldatetime" />
+    <Property Name="site_id" Type="nvarchar" MaxLength="10" />
+    <Property Name="title" Type="nvarchar" MaxLength="200" />
+    <Property Name="subtitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="seller_id" Type="int" />
+    <Property Name="category_id" Type="nvarchar" MaxLength="20" />
+    <Property Name="price" Type="money" />
+    <Property Name="base_price" Type="money" />
+    <Property Name="original_price" Type="money" />
+    <Property Name="currency_id" Type="nchar" MaxLength="10" />
+    <Property Name="initial_quantity" Type="int" />
+    <Property Name="available_quantity" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="sold_quantity" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="buying_mode" Type="nvarchar" MaxLength="200" />
+    <Property Name="listing_type_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="start_time" Type="smalldatetime" />
+    <Property Name="stop_time" Type="smalldatetime" />
+    <Property Name="condition" Type="nvarchar" MaxLength="50" />
+    <Property Name="permalink" Type="nvarchar" MaxLength="200" />
+    <Property Name="thumbnail" Type="nvarchar" MaxLength="200" />
+    <Property Name="secure_thumbnail" Type="nvarchar" MaxLength="400" />
+    <Property Name="accepts_mercadopago" Type="bit" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="date_created" Type="smalldatetime" />
+    <Property Name="last_updated" Type="smalldatetime" />
+    <Property Name="seller_custom_field" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsPosted" Type="bit" Nullable="false" />
+    <Property Name="sub_status" Type="nvarchar" MaxLength="150" />
+    <Property Name="historical_start_time" Type="smalldatetime" />
+  </EntityType>
+  <EntityContainer Name="WebStationModelStoreContainer">
+    <EntitySet Name="Item" EntityType="Self.Item" Schema="ML" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

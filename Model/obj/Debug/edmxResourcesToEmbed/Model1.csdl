@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebStationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DBContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Items" EntityType="WebStationModel.Item" />
+  </EntityContainer>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="0" />
+    <Property Name="ChangeUser" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="ChangeDate" Type="DateTime" Precision="0" />
+    <Property Name="site_id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="subtitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="seller_id" Type="Int32" />
+    <Property Name="category_id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="base_price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="original_price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="currency_id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="initial_quantity" Type="Int32" />
+    <Property Name="available_quantity" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="sold_quantity" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="buying_mode" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="listing_type_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="start_time" Type="DateTime" Precision="0" />
+    <Property Name="stop_time" Type="DateTime" Precision="0" />
+    <Property Name="condition" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="permalink" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="thumbnail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="secure_thumbnail" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="accepts_mercadopago" Type="Boolean" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="date_created" Type="DateTime" Precision="0" />
+    <Property Name="last_updated" Type="DateTime" Precision="0" />
+    <Property Name="seller_custom_field" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsPosted" Type="Boolean" Nullable="false" />
+    <Property Name="sub_status" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="historical_start_time" Type="DateTime" Precision="0" />
+  </EntityType>
+</Schema>
